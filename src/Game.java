@@ -1,3 +1,4 @@
+package src;
 /**
  * This class will eventually control the main game loop
  */
