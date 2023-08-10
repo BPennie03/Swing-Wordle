@@ -27,6 +27,7 @@ List of things I am planning on implementing down the line:
 - Score saving
 - Error check against list of "valid" words to disallow entering garbage
 - Fix error(s) with duplicate letters
+- Show correct word after game loss
 - Make executable?
 
 ### UI:
