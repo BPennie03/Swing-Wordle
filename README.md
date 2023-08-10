@@ -2,6 +2,7 @@
 SwingWordle is an implementation of the popular New York Times game in Java Swing
 
 ## Images
+<img src="./img/swing-wordle-image.png"  width="35%" height="35%">
 
 ## TO-DO
 List of things I am planning on implementing down the line:
