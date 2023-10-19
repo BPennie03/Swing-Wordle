@@ -93,7 +93,6 @@ public class GuessManager {
         if (guessNum == 5) {
             JOptionPane.showMessageDialog(null, "YOU WIN");
         } else if (guessHistory.size() == 5) {
-
             JOptionPane.showMessageDialog(null, "You lose, the word was " + game.getTargetWord());
         }
     }
