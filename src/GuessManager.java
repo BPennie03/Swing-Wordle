@@ -18,7 +18,6 @@ public class GuessManager {
 
     /**
      * Constructor for the GuessManager
-     * 
      * @param game the current game
      * @param labelBoxes the list of labels that were created from the UI
      */
@@ -31,7 +30,6 @@ public class GuessManager {
     /**
      * Takes a uses guess and sanity checks its length, then passes it on to the
      * helper method to update the UI
-     * 
      * @param guess string representation of the user's submitted guess
      */
     public void makeGuess(String guess) {
@@ -51,7 +49,6 @@ public class GuessManager {
     /**
      * Helper method to the makeGuess method to update the UI based on the user's
      * guess
-     * 
      * @param correctPositions
      * @param guess
      */
