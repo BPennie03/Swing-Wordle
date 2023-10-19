@@ -1,4 +1,5 @@
 package src;
+
 import java.awt.*;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ public class GuessManager {
     private ArrayList<String> guessHistory;
 
     // Colors taken directly from the real Wordle game
-    private Color greenColor = new Color(83, 141, 78); 
+    private Color greenColor = new Color(83, 141, 78);
     private Color yellowColor = new Color(181, 159, 59);
 
     /**
@@ -27,7 +28,8 @@ public class GuessManager {
     }
 
     /**
-     * Takes a uses guess and sanity checks its length, then passes it on to the helper method to update the UI
+     * Takes a uses guess and sanity checks its length, then passes it on to the
+     * helper method to update the UI
      * @param guess string representation of the user's submitted guess
      */
     public void makeGuess(String guess) {
@@ -45,7 +47,8 @@ public class GuessManager {
     }
 
     /**
-     * Helper method to the makeGuess method to update the UI based on the user's guess
+     * Helper method to the makeGuess method to update the UI based on the user's
+     * guess
      * @param correctPositions
      * @param guess
      */
@@ -53,16 +56,16 @@ public class GuessManager {
         int row = guessHistory.size();
         int col = 5; // Columns are always 5
 
-        // A "sum" used to check if all 5 letters are correct 
+        // A "sum" used to check if all 5 letters are correct
         int guessNum = 0;
 
         for (int i = 0; i < guess.length(); i++) {
-            
+
             int index = row * col + i;
 
             // Avoid IndexOutOfBoundsException
-            if (index >= labelBoxes.size()) { 
-                break; 
+            if (index >= labelBoxes.size()) {
+                break;
             }
 
             JLabel label = labelBoxes.get(index);
@@ -83,9 +86,11 @@ public class GuessManager {
             }
         }
 
-        // If all 5 letters were in correct spot 
+        // If all 5 letters were in correct spot
         if (guessNum == 5) {
             JOptionPane.showMessageDialog(null, "YOU WIN");
+        } else if (guessHistory.size() == 5) {
+            JOptionPane.showMessageDialog(null, "You lose, the word was " + game.getTargetWord());
         }
     }
 }
