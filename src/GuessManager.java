@@ -19,7 +19,7 @@ public class GuessManager {
     /**
      * Constructor for the GuessManager
      * 
-     * @param game       the current game
+     * @param game the current game
      * @param labelBoxes the list of labels that were created from the UI
      */
     public GuessManager(Game game, ArrayList<JLabel> labelBoxes) {
